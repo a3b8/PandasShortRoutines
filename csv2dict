@@ -1,0 +1,27 @@
+import pandas as pd
+
+# Get data - reading the CSV file
+import mpu.pd
+df = mpu.pd.example_df()
+
+# Convert
+dicts = df.to_dict('records')
+
+The content of df is:
+
+     country   population population_time    EUR
+0    Germany   82521653.0      2016-12-01   True
+1     France   66991000.0      2017-01-01   True
+2  Indonesia  255461700.0      2017-01-01  False
+3    Ireland    4761865.0             NaT   True
+4      Spain   46549045.0      2017-06-01   True
+5    Vatican          NaN             NaT   True
+
+The content of dicts is
+
+[{'country': 'Germany', 'population': 82521653.0, 'population_time': Timestamp('2016-12-01 00:00:00'), 'EUR': True},
+ {'country': 'France', 'population': 66991000.0, 'population_time': Timestamp('2017-01-01 00:00:00'), 'EUR': True},
+ {'country': 'Indonesia', 'population': 255461700.0, 'population_time': Timestamp('2017-01-01 00:00:00'), 'EUR': False},
+ {'country': 'Ireland', 'population': 4761865.0, 'population_time': NaT, 'EUR': True},
+ {'country': 'Spain', 'population': 46549045.0, 'population_time': Timestamp('2017-06-01 00:00:00'), 'EUR': True},
+ {'country': 'Vatican', 'population': nan, 'population_time': NaT, 'EUR': True}]
