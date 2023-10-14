@@ -1,0 +1,5 @@
+## This routine reads a .csv file with a single column (and without comma character as text delimiter) into a list 
+## Retrieved from https://stackoverflow.com/questions/13428318/reading-rows-from-a-csv-file-in-python
+
+for line in open("csvfile.csv"):
+    csv_row = line.split() #returns a list, for example, ["1","50","60"]
