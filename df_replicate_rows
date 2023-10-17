@@ -1,0 +1,13 @@
+## replicate rows in data frame
+## retrieved from: https://www.statology.org/pandas-replicate-rows/ 
+
+import numpy as np
+
+#define new DataFrame as original DataFrame with each row repeated 3 times
+df_new = pd.DataFrame(np.repeat(df.values, 3, axis=0))
+
+#assign column names of original DataFrame to new DataFrame
+df_new.columns = df.columns
+
+#view new DataFrame
+print(df_new)
