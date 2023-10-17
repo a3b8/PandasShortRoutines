@@ -1,0 +1,21 @@
+# Data frame column to list
+# List to data frame column
+
+# retrieved from:
+# https://stackoverflow.com/questions/23748995/pandas-dataframe-column-to-list
+# https://stackoverflow.com/questions/42049147/convert-list-to-pandas-dataframe-column
+
+
+# convert data frame to list 
+
+df = pd.DataFrame({'a': [1, 3, 5, 7, 4, 5, 6, 4, 7, 8, 9],
+                   'b': [3, 5, 6, 2, 4, 6, 7, 8, 7, 8, 9]})
+
+a=df['a'].to_list()
+print(a)
+
+# convert list to df
+
+#create new df 
+df = pd.DataFrame({'a':a})
+print (df)
